@@ -76,6 +76,7 @@ nav ul li a:hover {
   margin-bottom: 40px;
   width: 85%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
 }
 
 #about p {
@@ -83,35 +84,17 @@ nav ul li a:hover {
 }
 
 .about-content {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-description {
-  max-width: 200px;
-  text-align: left;
-  position: absolute;
-  background: chartreuse;
-  border-radius: 15px;
-  padding: 15px;
-  padding-bottom: 20px;
-  left: 60px;
-  top: 0;
-  z-index: 9;
-}
-
-.project-description h3 {
-  color: #800080;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
 .about-content .wrapper {
+  display: inline-block;
   overflow: hidden;
   border-radius: 50%;
   border: 3px solid #4caf50;
+  margin: 0 auto;
 }
 
 .about-content img {
@@ -127,7 +110,7 @@ nav ul li a:hover {
 
 /* Skills Section */
 #skills {
-  background-image: url("http://83.244.112.170:5136/Content/images/h/notifications.jpg");
+  background-image: url("imags/notifications.jpg");
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -145,22 +128,20 @@ nav ul li a:hover {
 }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
   padding: 10px;
-  gap: 10px;
   border-radius: 15px;
   background-color: rgba(300, 300, 300, 0.6);
 }
 
 .skill {
+  display: inline-block;
   background-color: rgba(0, 128, 0, 0.8);
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 1.1em;
+  margin: 5px;
   cursor: pointer;
-  white-space: nowrap;
   transition: background-color 0.3s ease;
 }
 
@@ -190,6 +171,7 @@ nav ul li a:hover {
   background-color: #e0e0e0;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 300px;
 }
 
 #projects h2 {
@@ -199,18 +181,21 @@ nav ul li a:hover {
 
 .projects-container {
   position: relative;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
+  gap: 20px; */
+  /* align-items: center; */
 }
 
 .project-card {
+  max-width: 80%;
+  display: block;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
-  width: 80%; /* Adjust width to make it responsive */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .project-1 {
@@ -222,16 +207,27 @@ nav ul li a:hover {
 }
 
 .project-3 {
+  position: absolute;
   background-color: #557a95;
   color: white;
-}
-
-.project-card h3 {
+  max-width: 150%;
+  width: 103%;
+  padding-bottom: 100px;
   margin-top: 0;
+  text-align: center;
 }
 
-.project-card p {
-  margin-bottom: 0;
+.project-4 {
+  max-width: 200px;
+  text-align: left;
+  position: absolute;
+  background: chartreuse;
+  border-radius: 15px;
+  padding: 15px;
+  padding-bottom: 20px;
+  left: 40px;
+  top: -770px;
+  z-index: 9;
 }
 
 .project-card:hover {
@@ -256,21 +252,19 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-/* Form Styles */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  margin-bottom: 15px;
 }
 
 form label {
   font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 
 form input,
@@ -287,7 +281,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-  border-color: #4caf50; /* Green border on focus */
+  border-color: #4caf50;
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
   outline: #4caf50;
 }
@@ -297,7 +291,6 @@ form textarea {
   min-height: 100px;
 }
 
-/* Submit Button */
 button {
   background-color: white;
   color: #4caf50;
@@ -338,7 +331,7 @@ footer a {
   color: #ffcc00;
   text-decoration: none;
   margin: 0 5px;
-  font-weight: bold; /* Make links bold */
+  font-weight: bold;
 }
 
 footer a:hover {
@@ -351,36 +344,36 @@ footer a:hover {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #333;
+  background-color: #4caf50;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  line-height: 40px;
 }
 
 .scroll-to-top a {
   color: white;
   text-decoration: none;
   font-size: 24px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .scroll-to-top:hover {
-  background-color: #555;
+  background-color: #45a049;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .project-preview {
-    flex-direction: column;
-  }
-
   .project-description {
     display: none;
   }
-
-  .project-preview img {
-    margin-top: 20px;
+  .project-3 {
+    width: auto;
+  }
+  #projects {
+    padding-bottom: 380px;
   }
 }
